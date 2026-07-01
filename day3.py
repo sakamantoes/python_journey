@@ -24,7 +24,6 @@ while True:
         username = input("Enter the user's name: ")
         password = input("Enter the user's password: ")
         pin= input("Enter the user's pin: ")
-        login = input("Enter the user's login: ")
         balance = 0.0
         usersDetail.append((username, password, pin, login, balance))
         print(f"User added: {username} with initial balance of {balance}")
@@ -32,12 +31,12 @@ while True:
         # login to the account
     elif choice == "2":
         username = input("Enter your username: ")
-        password = input("Enter your password: ")
+        entered_password = input("Enter your password: ")
         user_found = False
         if usersDetail:
             print("\nUsers:")
             for name, password, pin, login, balance in usersDetail:
-                if name == username and password == password:
+                if name == username and password == entered_password:
                     user_found = True
                     print(f"Name: {name}, Balance: {balance}")
         else:
