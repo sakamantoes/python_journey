@@ -27,7 +27,7 @@ while True:
         login = input("Enter the user's login: ")
         balance = 0.0
         usersDetail.append((username, password, pin, login, balance))
-        print(f"User added: {username}")
+        print(f"User added: {username} with initial balance of {balance}")
 
         # login to the account
     elif choice == "2":
